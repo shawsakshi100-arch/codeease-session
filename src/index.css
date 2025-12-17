@@ -1,0 +1,146 @@
+/* Reset & global font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body & dreamy background */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffe1f2, #d1f0ff, #fff9c4, #ffd1e0, #c8f7f5);
+  background-size: 600% 600%;
+  animation: gradientLoop 30s ease infinite;
+  color: #333;
+}
+
+/* App container */
+.app-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+/* Glassy card */
+/* Glassy card with pastel background */
+.screen {
+  /* Lighter background */
+  background: rgba(255, 240, 250, 0.7); /* soft pastel light color */
+  /* or for gradient option */
+  /* background: linear-gradient(135deg, #fff1f6, #f0fbff, #fffce4); */
+  
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.screen:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.15);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  background: linear-gradient(120deg, #ff9ec0, #a0e4ff, #ffd3a5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* Paragraphs */
+p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+/* Buttons */
+button {
+  margin-top: 16px;
+  padding: 12px 28px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff9ec0, #a0e4ff);
+  box-shadow: 0 6px 20px rgba(255,158,192,0.35);
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 28px rgba(160,228,255,0.45);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background: #fff7ff;
+  color: #333;
+  margin-bottom: 14px;
+  transition: all 0.2s ease;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:focus {
+  outline: none;
+  border-color: #a0e4ff;
+  box-shadow: 0 0 0 2px rgba(160,228,255,0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shadowPulse {
+  0%, 100% { box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+  50% { box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
+}
+
+/* Dreamy gradient loop */
+@keyframes gradientLoop {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 50%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+
